@@ -1,0 +1,434 @@
+let num2 = 0
+let num3 = 0
+player.onChat("test", function () {
+    num2 = 13
+    blocks.fill(
+    AIR,
+    pos(5, num2, -12),
+    pos(5, num2 - 1, -12),
+    FillOperation.Replace
+    )
+    num2 += 2
+    blocks.fill(
+    AIR,
+    pos(5, num2, -11),
+    pos(5, num2 - 1, -11),
+    FillOperation.Replace
+    )
+    num3 = -10
+    for (let index = 0; index < 3; index++) {
+        num2 += 1
+        blocks.place(AIR, pos(5, num2, num3))
+        num3 += 1
+    }
+    for (let index = 0; index < 2; index++) {
+        num2 += 1
+        blocks.fill(
+        AIR,
+        pos(5, num2, num3),
+        pos(5, num2, num3 + 1),
+        FillOperation.Replace
+        )
+        num3 += 1
+    }
+})
+player.onChat("right", function (num1) {
+    agent.move(RIGHT, num1)
+})
+player.onChat("back", function (num1) {
+    agent.move(BACK, num1)
+})
+function logoRight () {
+    blocks.fill(
+    WOOL,
+    pos(5, 2, 4),
+    pos(5, 3, 4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 4, 3),
+    pos(5, 7, 3),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 8, 4),
+    pos(5, 10, 4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 11, 3),
+    pos(5, 13, 3),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 14, 4),
+    pos(5, 17, 4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 3, 6),
+    pos(5, 4, 6),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 5, 5),
+    pos(5, 7, 5),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 8, 6),
+    pos(5, 10, 6),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 11, 5),
+    pos(5, 13, 5),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 14, 6),
+    pos(5, 15, 6),
+    FillOperation.Replace
+    )
+    blocks.place(WOOL, pos(5, 5, 8))
+    blocks.fill(
+    WOOL,
+    pos(5, 7, 8),
+    pos(5, 7, 7),
+    FillOperation.Replace
+    )
+    blocks.place(WOOL, pos(5, 8, 7))
+}
+function logoCenter () {
+    shapes.circle(
+    GREEN_WOOL,
+    pos(5, 15, 0),
+    14,
+    Axis.X,
+    ShapeOperation.Replace
+    )
+    blocks.place(GREEN_WOOL, pos(5, 1, -3))
+    blocks.fill(
+    WOOL,
+    pos(5, 1, -2),
+    pos(5, 3, 2),
+    FillOperation.Replace
+    )
+    blocks.place(GREEN_WOOL, pos(5, 1, 3))
+    blocks.fill(
+    WOOL,
+    pos(5, 4, -1),
+    pos(5, 7, 1),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 8, -2),
+    pos(5, 10, 2),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 11, -1),
+    pos(5, 11, 1),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 13, -1),
+    pos(5, 13, 1),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 14, -2),
+    pos(5, 15, 2),
+    FillOperation.Replace
+    )
+    blocks.place(GREEN_WOOL, pos(5, 14, 0))
+    blocks.place(WOOL, pos(5, 16, 0))
+    blocks.fill(
+    WOOL,
+    pos(5, 17, -2),
+    pos(5, 17, 2),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 18, -1),
+    pos(5, 18, 1),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 19, -4),
+    pos(5, 19, 4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 20, -5),
+    pos(5, 20, 5),
+    FillOperation.Replace
+    )
+    blocks.place(GREEN_WOOL, pos(5, 20, -4))
+    blocks.place(GREEN_WOOL, pos(5, 20, 0))
+    blocks.place(GREEN_WOOL, pos(5, 20, 4))
+    blocks.fill(
+    WOOL,
+    pos(5, 21, -4),
+    pos(5, 21, 4),
+    FillOperation.Replace
+    )
+    blocks.place(GREEN_WOOL, pos(5, 21, -2))
+    blocks.place(GREEN_WOOL, pos(5, 21, 2))
+    blocks.fill(
+    WOOL,
+    pos(5, 22, -2),
+    pos(5, 22, 2),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 23, -1),
+    pos(5, 23, 1),
+    FillOperation.Replace
+    )
+    blocks.place(WOOL, pos(5, 24, 0))
+    blocks.fill(
+    AIR,
+    pos(5, 26, -7),
+    pos(5, 30, 7),
+    FillOperation.Replace
+    )
+}
+function logoLeft () {
+    blocks.fill(
+    WOOL,
+    pos(5, 2, -4),
+    pos(5, 3, -4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 4, -3),
+    pos(5, 7, -3),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 8, -4),
+    pos(5, 10, -4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 11, -3),
+    pos(5, 13, -3),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 14, -4),
+    pos(5, 17, -4),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 3, -6),
+    pos(5, 4, -6),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 5, -5),
+    pos(5, 7, -5),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 8, -6),
+    pos(5, 10, -6),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 11, -5),
+    pos(5, 13, -5),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    WOOL,
+    pos(5, 14, -6),
+    pos(5, 15, -6),
+    FillOperation.Replace
+    )
+    blocks.place(WOOL, pos(5, 5, -8))
+    blocks.fill(
+    WOOL,
+    pos(5, 7, -8),
+    pos(5, 7, -7),
+    FillOperation.Replace
+    )
+    blocks.place(WOOL, pos(5, 8, -7))
+}
+player.onChat("starbucks", function () {
+    logoCenter()
+    logoLeft()
+    logoRight()
+    logoWayLeft()
+    logoWayRight()
+    leftTail()
+    rightTail()
+})
+player.onChat("down", function (num1) {
+    agent.move(DOWN, num1)
+})
+function rightTail () {
+    num2 = 15
+    blocks.fill(
+    WOOL,
+    pos(5, num2, 11),
+    pos(5, num2, 10),
+    FillOperation.Replace
+    )
+    num3 = 10
+    for (let index = 0; index < 2; index++) {
+        num2 += 1
+        blocks.fill(
+        WOOL,
+        pos(5, num2, num3),
+        pos(5, num2, num3 - 3),
+        FillOperation.Replace
+        )
+        num3 += -1
+    }
+    num2 += 1
+    blocks.fill(
+    WOOL,
+    pos(5, num2, num3),
+    pos(5, num2, num3 + 1),
+    FillOperation.Replace
+    )
+    num2 += 1
+    blocks.place(WOOL, pos(5, num2, num3 + 1))
+}
+function leftTail () {
+    num2 = 15
+    blocks.fill(
+    WOOL,
+    pos(5, num2, -11),
+    pos(5, num2, -10),
+    FillOperation.Replace
+    )
+    num3 = -10
+    for (let index = 0; index < 2; index++) {
+        num2 += 1
+        blocks.fill(
+        WOOL,
+        pos(5, num2, num3),
+        pos(5, num2, num3 + 3),
+        FillOperation.Replace
+        )
+        num3 += 1
+    }
+    num2 += 1
+    blocks.fill(
+    WOOL,
+    pos(5, num2, num3 - 1),
+    pos(5, num2, num3),
+    FillOperation.Replace
+    )
+    num2 += 1
+    blocks.place(WOOL, pos(5, num2, num3 - 1))
+}
+player.onChat("up", function (num1) {
+    agent.move(UP, num1)
+})
+player.onChat("fw", function (num1) {
+    agent.move(FORWARD, num1)
+})
+function logoWayRight () {
+    blocks.place(GREEN_WOOL, pos(5, 5, 9))
+    num2 = 6
+    for (let index = 0; index < 4; index++) {
+        blocks.place(WOOL, pos(5, num2, 9))
+        num2 += 2
+    }
+    blocks.place(WOOL, pos(5, num2, 9))
+    blocks.place(WOOL, pos(5, num2, 8))
+    blocks.place(GREEN_WOOL, pos(5, 6, 10))
+    num2 = 7
+    blocks.place(WOOL, pos(5, num2, 10))
+    num2 += 2
+    blocks.fill(
+    WOOL,
+    pos(5, num2, 10),
+    pos(5, num2, 11),
+    FillOperation.Replace
+    )
+    blocks.place(AIR, pos(5, num2, 12))
+    for (let index = 0; index < 2; index++) {
+        num2 += 2
+        blocks.fill(
+        WOOL,
+        pos(5, num2, 10),
+        pos(5, num2, 12),
+        FillOperation.Replace
+        )
+    }
+    blocks.fill(
+    AIR,
+    pos(5, num2 - 2, 13),
+    pos(5, num2 + 10, 14),
+    FillOperation.Replace
+    )
+}
+player.onChat("left", function (num1) {
+    agent.move(LEFT, num1)
+})
+function logoWayLeft () {
+    blocks.place(GREEN_WOOL, pos(5, 5, -9))
+    num2 = 6
+    for (let index = 0; index < 4; index++) {
+        blocks.place(WOOL, pos(5, num2, -9))
+        num2 += 2
+    }
+    blocks.place(WOOL, pos(5, num2, -9))
+    blocks.place(WOOL, pos(5, num2, -8))
+    blocks.place(GREEN_WOOL, pos(5, 6, -10))
+    num2 = 7
+    blocks.place(WOOL, pos(5, num2, -10))
+    num2 += 2
+    blocks.fill(
+    WOOL,
+    pos(5, num2, -10),
+    pos(5, num2, -11),
+    FillOperation.Replace
+    )
+    blocks.place(AIR, pos(5, num2, -12))
+    for (let index = 0; index < 2; index++) {
+        num2 += 2
+        blocks.fill(
+        WOOL,
+        pos(5, num2, -10),
+        pos(5, num2, -12),
+        FillOperation.Replace
+        )
+    }
+    blocks.fill(
+    AIR,
+    pos(5, num2 - 2, -13),
+    pos(5, num2 + 10, -14),
+    FillOperation.Replace
+    )
+}
