@@ -1,40 +1,64 @@
 let num2 = 0
 let num3 = 0
 player.onChat("test", function () {
-    num2 = 13
-    blocks.fill(
-    AIR,
-    pos(5, num2, -12),
-    pos(5, num2 - 1, -12),
-    FillOperation.Replace
-    )
-    num2 += 2
-    blocks.fill(
-    AIR,
-    pos(5, num2, -11),
-    pos(5, num2 - 1, -11),
-    FillOperation.Replace
-    )
-    num3 = -10
-    for (let index = 0; index < 3; index++) {
-        num2 += 1
-        blocks.place(AIR, pos(5, num2, num3))
-        num3 += 1
-    }
-    for (let index = 0; index < 2; index++) {
-        num2 += 1
-        blocks.fill(
-        AIR,
-        pos(5, num2, num3),
-        pos(5, num2, num3 + 1),
-        FillOperation.Replace
-        )
-        num3 += 1
-    }
+	
 })
 player.onChat("right", function (num1) {
     agent.move(RIGHT, num1)
 })
+function tippyTop () {
+    num2 = 25
+    num3 = 4
+    for (let index = 0; index < 3; index++) {
+        blocks.fill(
+        AIR,
+        pos(5, num2, 0 - num3),
+        pos(5, num2, -12),
+        FillOperation.Replace
+        )
+        blocks.fill(
+        AIR,
+        pos(5, num2, num3),
+        pos(5, num2, 12),
+        FillOperation.Replace
+        )
+        num2 += -1
+        num3 += 2
+    }
+    num3 += -1
+    for (let index = 0; index < 2; index++) {
+        blocks.fill(
+        AIR,
+        pos(5, num2, 0 - num3),
+        pos(5, num2, -12),
+        FillOperation.Replace
+        )
+        blocks.fill(
+        AIR,
+        pos(5, num2, num3),
+        pos(5, num2, 12),
+        FillOperation.Replace
+        )
+        num2 += -1
+        num3 += 1
+    }
+    for (let index = 0; index < 2; index++) {
+        blocks.fill(
+        AIR,
+        pos(5, num2, 0 - num3),
+        pos(5, num2 - 1, -12),
+        FillOperation.Replace
+        )
+        blocks.fill(
+        AIR,
+        pos(5, num2, num3),
+        pos(5, num2 - 1, 12),
+        FillOperation.Replace
+        )
+        num2 += -1
+        num3 += 1
+    }
+}
 player.onChat("back", function (num1) {
     agent.move(BACK, num1)
 })
@@ -289,6 +313,7 @@ player.onChat("starbucks", function () {
     logoWayRight()
     leftTail()
     rightTail()
+    tippyTop()
 })
 player.onChat("down", function (num1) {
     agent.move(DOWN, num1)
